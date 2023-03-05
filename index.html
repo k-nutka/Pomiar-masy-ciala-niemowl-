@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomiar masy ciała niemowlaka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="photo">
+    <img src="newborn.jpg" width= "50%" height="1%"   alt="zdjecieDziecka" id="newborn-photo">
+    </div>
+    <div class="title">
+        Przeanalizuj pomiar masy ciała dziecka
+    </div>
+    
+    <div class="container">
+        <div id="weight-info">
+            <p>Fizjologiczny spadek masy ciała noworodka występuje w pierwszych 3-5 dobach życia. Główną przyczyną ubytku masy ciała 
+                w pierwszych dobach życia dziecka jest utrata wody przez parowanie, wydalanie moczu i smółki, utrata mazi płodowej 
+            oraz ulewanie wód płodowych po porodzie.Największy spadek masy ciała przypada najczęściej między 2-3 dobą życia dziecka 
+        i nie powinien przekraczać 10% masy urodzeniowej. </p>
+            </div>
+        <div id="weight_loss">
+           <p id="paragraph-title"> W pierwszych dniach życia dziecka możesz obliczyć procentowy spadek masy ciała:</p>
+           <label for="birth-weight">Podaj masę urodzeniową noworodka - wynik podaj w gramach:</label>
+            <input type="number"  id="birth-weight"> g. <br>
+            
+           <label for="current-weight">Podaj aktualną masę ciała noworodka - wynik podaj w gramach:</label>
+            <input type="number"  id="current-weight"> g.
+        </div>
+        <div>
+            <button id="button-loss">Oblicz</button>
+        </div>
+
+        <div id="increase-info">
+        <p>Jednym z najbardziej miarodajnych wskaźników skutecznego karmienia dziecka jest analiza jego przyrostów masy ciała.
+            Poniżej możesz dokonać analizy przyrostu masy ciała dziecka zgodnie<br>
+            z normami zwiększania wg Ruth Lawrence. 
+            Normy te określone są dla dzieci około 50. centyla.<br>
+            Oznacza to, że połowa dzieci w tym wieku ma podobne rozmiary.
+        </p> 
+        <p>Dokonując analizy przyrostów masy ciała dziecka należy mieć na uwadzę,<br> że dzieci, z niższych centyli
+            mogą mieć niższe przyrosty masy ciała,<br> natomiast dzieci z wyższych centyli wyższe. 
+        </p>
+     </div>
+     <div id="weight_increase">
+        <p id="paragraph-title">Poniżej możesz obliczyć przyrost masy ciała dziecka:</p>
+        <label for="date">Podaj datę urodzenia dziecka</label>
+        <input type="date" id="birth-date"><br>
+        <label for="last-measurement">Data ostatniej znanej masy ciała dziecka:</label>
+        <input type="date"  id="last-measurement"><br>
+        <label for="last-wieight">Ostatnia znana masa ciała dziecka - wynik podaj w gramach:</label>
+        <input type="number" id="last-wieight"> g.<br>
+        <label for="actually-weight">Masa ciała dziecka w dniu dzisiejszym - wynik podaj w gramach</label>
+        <input type="number" id="actually-weight"> g.
+    </div>
+    <div>
+        <button id="button-increase">Oblicz</button>
+    </div>
+    <div class="modal">
+        <div class="button-container">
+        <button id="close-button">X</button>
+        </div>
+        <div class="modal-content">
+            <p id="info-for-user">Tekst</p>
+        </div>
+   
+    </div>
+
+
+
+ <script src="code.js"></script>   
+</body>
+</html>
