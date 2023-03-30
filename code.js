@@ -71,6 +71,13 @@ let lastMeasurement = document.getElementById("last-measurement"); // ostatni po
 let lastWeight = document.getElementById("last-wieight");
 let actuallyWeight = document.getElementById("actually-weight");
 let buttonIncrease = document.getElementById("button-increase");
+function clearIncrease() {
+  console.log("Clear");
+  birthDay.value = "";
+  lastMeasurement.value = "";
+  lastWeight.value = "";
+  actuallyWeight.value = "";
+}
 
 buttonIncrease.addEventListener("click", function (e) {
   e.preventDefault();
@@ -98,6 +105,9 @@ buttonIncrease.addEventListener("click", function (e) {
 
   if (howMonth < 0) {
     alert("Błąd");
+  } else if (growth < 0) {
+    modal.style.display = "flex";
+    infoForUser.innerHTML = `Odnotowano ubytek masy ciała. Upewnij się, czy wprowadzono właściwe dane. `;
   } else if (howMonth <= 3) {
     if (growth >= 26 && growth <= 31) {
       modal.style.display = "flex";
@@ -150,6 +160,8 @@ buttonIncrease.addEventListener("click", function (e) {
     modal.style.display = "flex";
     infoForUser.innerHTML = `Zastosowana w aplikacji skala przyrostów masy ciała nie obejmuje dzieci powyżej 1. roku życia`;
   }
+
+  clearIncrease();
 });
 
 function checkAll() {
@@ -175,11 +187,5 @@ function checkAll() {
       "Uzupełnij wszystkie pola wymagane do obliczenia przyrostu masy ciała!"
     );
   }
-}
-
-function clearIncrease() {
-  birthDay.value = "";
-  lastMeasurement.value = "";
-  lastWeight = "";
-  actuallyWeight = "";
+  window.scrollTo(0, 0);
 }

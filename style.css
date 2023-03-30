@@ -1,5 +1,9 @@
 body{
     background-color: gainsboro;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -7,6 +11,8 @@ body{
    display: flex;
    flex-direction: column;
    position: relative;
+   justify-content: center;
+   align-items: center;
    }
    
 .container{
@@ -27,6 +33,7 @@ body{
 
 .title{
    background-color: grey;
+   width: 100%;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-size: 40px;
    font-weight: bold;
@@ -66,14 +73,16 @@ text-align: left;
     font-size: 30px;
 }
 .modal{
-    display: none;
-    position: absolute;
-    flex-direction: column;
+   display: none;
+   position: absolute;
+   top:0;
+   width: 80%;
+   height: 300px;
+   flex-direction: column;
    border:4px dotted rgba(53, 53, 53, 0.562);
-   height: 500px;
-   width: 800px;
+  
    background-color: gainsboro;
-   margin-left: 50px;
+   
 
 }
 
@@ -88,7 +97,7 @@ text-align: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    top:0;
 }
 
 #button-loss, #button-increase{
@@ -97,19 +106,156 @@ text-align: left;
     background-color:rgba(73, 60, 42, 0.562);
     border: 2px dotted  peachpuff;
     border-radius: 50px;
+    font-weight: bold;
 
 }
 
-@media (max-width: 850px) {
+
+@media(max-width:1120px){
+
     .container{
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+        padding: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
 
-    #increase-info{
-        margin: 40px 10px
     }
+ 
+     #weight-info{
+         border-radius: 50px;
+         margin: 40px, 0px;
+     }
+     #increase-info{
+        
+         border-radius: 50px;
+         margin: 40px, 0px;
+     }
+     #weight_loss{
+        margin:40px, 0px;
+       
+        }
+        
+        #weight_increase{
+        margin:40px, 0px;
+       
+        }
 
-  }
+        .title{
+            font-size: 30px
+        }
+
+        img{
+            width:100%;
+        
+   
+              
+            }
+     
+      
+     
+     }
+
+
+     
+@media(max-width:600px){
+
+    .container{
+        padding: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+ 
+     #weight-info{
+         border-radius: 50px;
+         margin: 10px, 0px;
+     }
+     #increase-info{
+        
+         border-radius: 50px;
+         margin: 10px, 0px;
+     }
+     #weight_loss{
+        margin:10px, 0px;
+       
+        }
+        
+        #weight_increase{
+        margin:10px, 0px;
+       
+        }
+
+        .title{
+            font-size: 25px
+        }
+
+        .modal{
+            width: 60%;
+            font-size: 15px;
+        }
+
+
+        
+       
+     
+      
+     
+     }
+     
+
+     @media(max-width:420px){
+        
+#paragraph-title{
+    font-size: 20px;
+}
+
+      
+.title{
+font-size: 20px
+            }
+
+          
+                
+             .container{
+                padding: 5px;
+                margin-left:10px;
+                margin-right: 10px;
+                font-size: 15px;
+                
+             }
+            
+             
+           
+             
+             #weight-info{
+            
+                 margin:5px;
+             }
+             #increase-info{
+                 margin:5px;
+              
+             
+             }
+             
+             #weight_loss{
+             margin:5px;
+             
+             }
+             
+             #weight_increase{
+             margin:5px;
+           
+             }
+
+
+         
+          
+         
+         }
+         
+    
+      
+
+
+
 
 
