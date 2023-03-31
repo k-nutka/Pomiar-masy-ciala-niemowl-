@@ -29,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+text-align: center;
 }
 
 .title {
@@ -211,6 +212,6 @@ body {
 
 @media (max-width: 335px) {
   .title {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
